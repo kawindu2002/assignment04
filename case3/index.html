@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case3</title>
+    <link rel="stylesheet" href="../style/normalize.css">
+
+    <style>
+        section{
+            width: 800px;
+            height: 600px;
+            border:3px solid black;
+            position: relative;
+            margin: 10px;
+        }
+
+        div{
+            position: absolute;
+            border-radius: 20px;
+            width: 170px;
+            height: 100px;
+            animation-name: animeRotate;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-duration: 3s;
+        }
+
+        @keyframes animeRotate {
+            0%{
+                background-color: #0c0ce3;
+                top: 0;
+                left: 0;
+            }
+
+            25%{
+                background-color: #d6dc0b;
+                transform: rotate(180deg);
+                top: 0;
+                left: 630px;
+            }
+
+            50%{
+                background-color: #943408;
+                transform: rotate(360deg);
+                left: 630px;
+                top: 500px;
+            }
+
+            75%{
+                background-color: #ce307f;
+                transform: rotate(180deg);
+                top: 500px;
+                left: 0;
+            }
+
+            100%{
+                background-color: #be800e;
+                transform: rotate(0deg);
+                left: 0;
+                top: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+</section>
+</body>
+</html>

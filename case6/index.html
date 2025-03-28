@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>case6</title>
+
+        <link rel="stylesheet" href="../style/normalize.css">
+        <link rel="stylesheet" href="../assets/lib/fontawesome/fontawesome-free-6.7.2-web/css/all.css">
+
+        <style>
+
+            body {
+                overflow: hidden;
+            }
+
+            section {
+                position: relative;
+            }
+
+            #sky {
+                width: 100vw;
+                height: 100vh;
+
+                background-image: url("../assets/images/sky.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+
+            #city {
+                width: 500vw;
+
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                position: absolute;
+                bottom: 50vh;
+                animation-name: background;
+                animation-timing-function: ease-out;
+                animation-duration: 13s;
+                animation-iteration-count: infinite;
+            }
+
+            #city>div {
+                width: 100vw;
+                height: 40vh;
+                background-image: url("../assets/images/city.png");
+                background-position: center;
+                background-size: cover;
+            }
+
+            #road {
+                width: 500vw;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                position: absolute;
+                bottom: 20vh;
+                animation-name: background;
+                animation-timing-function: ease-out;
+                animation-duration: 13s;
+                animation-iteration-count: infinite;
+            }
+
+            #road>div {
+                width: 100vw;
+                height: 30vh;
+                background-image: url("../assets/images/road.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+
+            #car {
+                background-image: url("../assets/images/car.png");
+                background-position: center;
+                background-size: cover;
+                height: 208px;
+                width: 500px;
+
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 35vh;
+                margin: auto;
+            }
+
+            #w1,#w2 {
+                width: 100px;
+                aspect-ratio: 1/1;
+                background-size: cover;
+                background-position: center;
+
+                animation-name: wheel;
+                animation-duration: 13s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: infinite;
+            }
+
+            #w1 {
+                background-image: url("../assets/images/wheel.png");
+                position: relative;
+                left: 555px;
+                bottom: 160px;
+            }
+
+            #w2 {
+                background-image: url("../assets/images/wheel.png");
+                position: relative;
+                left: 865px;
+                bottom: 260px;
+            }
+
+            @keyframes background {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-400vw);
+                }
+            }
+
+            @keyframes wheel {
+                0% {
+                    transform: rotate(0deg);
+                }
+                75% {
+                    transform: rotate(-360deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+    <section>
+        <div id="sky"></div>
+        <div id="city">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="road">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="car"></div>
+        <div>
+            <div id="w1"></div>
+            <div id="w2"></div>
+        </div>
+    </section>
+
+    </body>
+</html>

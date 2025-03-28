@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case2</title>
+    <link rel="stylesheet" href="../style/normalize.css">
+
+    <style>
+        body{
+            background-color: #1468d2;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        body>div:first-child{
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border-radius: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: #ffffff;
+            border: 14px solid white;
+            z-index: 0;
+        }
+
+        body>div:nth-child(2){
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 288px;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            display: grid;
+            grid-template-columns:repeat(2, 1fr) ;
+            transform: rotate(45deg);
+            z-index: 2;
+            transition:1.5s ease-out;
+        }
+
+        .grid{
+            position: relative;
+            border: 0px solid transparent;
+        }
+
+        .gr1{
+            border-left: 14px solid red;
+            border-top: 14px solid red;
+            background-color: transparent;
+            border-top-left-radius: 100%;
+        }
+
+        .gr2{
+            border-right: 14px solid transparent;
+            border-top: 14px solid transparent;
+            background-color: transparent;
+            border-top-right-radius: 100%;
+        }
+
+        .gr3{
+            border-left: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            background-color: transparent;
+            border-bottom-left-radius: 100%;
+        }
+
+        .gr4{
+            border-right: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            background-color: transparent;
+            border-bottom-right-radius: 100%;
+        }
+
+        body>div:nth-child(3){
+            width: 260px;
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+            background-color: dimgray;
+            position: absolute;
+            border: 0px solid transparent;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+        }
+
+        body>div:nth-child(2):hover{
+            transform: rotate(405deg);
+        }
+
+        .text{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: "Sans","serif";
+            font-weight: bold;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<div>
+    <div class="gr1"></div>
+    <div class="gr2"></div>
+    <div class="gr3"></div>
+    <div class="gr4"></div>
+</div>
+<div><div class="text">rwad</div></div>
+</body>
+</html>
